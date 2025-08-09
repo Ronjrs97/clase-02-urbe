@@ -6,6 +6,8 @@ import './App.css'
 import Counter from './components/Counter'
 import MainLayout from './layout/MainLayout'
 import TaskManager from './pages/TaskManagerPage/TaskManager'
+import CinemaLayout from './layout/CinemaLayout'
+import NowPlayingPage from './pages/cinema/NowPlayingPage'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,16 @@ const router = createBrowserRouter([
       {
         path: 'task-manager',
         element: <TaskManager />
+      },
+      {
+        path: 'cinema',
+        element: <CinemaLayout />,
+        children: [
+          {
+            path: 'now-playing',
+            element: <NowPlayingPage />
+          }
+        ]
       },
     ]
   },

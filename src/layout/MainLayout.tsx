@@ -23,7 +23,12 @@ const MainLayout = () => {
                 className={({ isActive } ) => isActive ? 'active bg-primary text-primary-content' : ''}
               >Task Manager </NavLink>
               </li>
-              <li><a>Item 3</a></li>
+              <li>
+                 <NavLink 
+                to={'/cinema/now-playing'}
+                className={({ isActive } ) => isActive ? 'active bg-primary text-primary-content' : ''}
+              >Cinema</NavLink>
+              </li>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -42,7 +47,12 @@ const MainLayout = () => {
                 className={({ isActive } ) => isActive ? 'active bg-primary text-primary-content' : ''}
               >Task Manager </NavLink>
             </li>
-            <li><a>Item 3</a></li>
+            <li>
+                 <NavLink 
+                to={'/cinema/now-playing'}
+                className={({ isActive } ) => isActive ? 'active bg-primary text-primary-content' : ''}
+              >Cinema</NavLink>
+              </li>
           </ul>
         </div>
         <div className="navbar-end">
