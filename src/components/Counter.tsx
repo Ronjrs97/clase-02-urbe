@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 
-interface CounterProps {
-    title?: string;
-    counterValue?: number;
-}
+// interface CounterProps {
+//     title?: string;
+//     counterValue?: number;
+// }
 
 
 //props
-const Counter = ({title = 'Hola Contador desde React', counterValue = 0} : CounterProps) => {
+const Counter = () => {
 
-  const [counter, setCounter] =  useState(counterValue);
+  const [counter, setCounter] =  useState(0);
   const [time, setTime] =  useState(0);
   const [callEffect, setCallEffect] =  useState(false);
 
@@ -46,7 +46,7 @@ const Counter = ({title = 'Hola Contador desde React', counterValue = 0} : Count
     <>
         <div className="card w-96 bg-base-100 shadow-xl mx-auto my-8">
             <div className="card-body flex flex-col items-center gap-3">
-                <h1 className="card-title text-3xl text-secondary text-center">{ title }</h1>
+                <h1 className="card-title text-3xl text-secondary text-center">Contador</h1>
                 {/* && renderizado condicional simple en vez de ? sin else */}
                 {counter > 0 ? (
                     <div className="">
